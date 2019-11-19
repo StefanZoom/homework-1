@@ -1,6 +1,12 @@
 body {
     background : lightgreen;
 }
+body:not(h1) {
+    color : teal;
+}
+:target {
+    border : 3px solid blue;
+}
 h1,h2 {
     padding : 1rem 0;
     width : auto;
@@ -34,6 +40,12 @@ header.main-introduction a#main-link:hover{
     font-size : 2.2rem;
 }
 
+header.main-introduction img + p::first-line {
+    font-size : 1.5rem;
+    color : green;
+    cursor : pointer;
+}
+
 header > img {
     width : 30%;
     height : 200px;
@@ -46,3 +58,37 @@ header > img {
     border-radius : 16px;
     border : 3px solid red;
 }
+
+
+/* CSS Selectors to know : 
+1) #example > p
+2) #example > h3 + p // samo paragraf posle h3 koji je direktan naslednik elementa sa id-em example
+
+
+
+
+
+
+CSS Pseudo-classes to know : 
+
+1) #example:first-child [h1:first-of-type]  [no('h1')]
+2) #example:last-child
+3) #example:nth-child(n) [nth-last-child(2)]
+4) #example:hover / #example:active / #example:visited 
+   #example:blur / #example:focus / :target / :required /
+   :disabled / :checked ;
+
+
+CSS Pseudo-elements to know :
+1) #example::after
+2) #example::before
+3) #example::selection
+4) #example::first-letter
+5) #example::first-line
+
+
+
+
+
+
+*/
